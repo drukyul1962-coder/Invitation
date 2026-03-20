@@ -11,19 +11,27 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-image: url('https://raw.githubusercontent.com/drukyul1962-coder/Invitation/main/background.png')
+            
+            /* --- Background Optimization --- */
+            background-image: url('https://raw.githubusercontent.com/drukyul1962-coder/Invitation/main/background.png');
+            background-size: cover;      /* Fills the whole screen without gaps */
+            background-position: center; /* Keeps the focus in the middle */
+            background-repeat: no-repeat;/* Prevents the image from tiling */
+            background-attachment: fixed;/* Keeps background still while scrolling */
         }
 
         .container {
-            width: 90%; /* Keeps a small gap at the edges on mobile */
-            max-width: 600px; /* Prevents it from getting too huge on desktop */
+            width: 85%; /* Slightly smaller for a cleaner "card" look */
+            max-width: 500px; 
+            padding: 10px; /* Air around the image */
         }
 
         img {
-            width: 100%;    /* Scales to the width of the container */
-            height: auto;   /* Maintains the original proportions */
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: block; /* Removes tiny bottom gap in some browsers */
+            width: 100%;    
+            height: auto;   
+            border-radius: 12px; /* Softer corners for invitations */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Deeper shadow for depth */
         }
     </style>
 </head>
